@@ -27,7 +27,11 @@ class AddTodo extends Component {
   }
 }
 
+const mapDispatchToProps = {
+  addTodo
+};
+
 export default connect(
   null,
-  { addTodo }
+  mapDispatchToProps
 )(AddTodo);

@@ -1,15 +1,22 @@
 const initialState = {
-  allIds: []
+  allIds: [],
+  byIds: {}
 };
 
 const todos = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case "ADD_TODO":
-      const { id } = action;
+    case 'ADD_TODO':
+      const { id, text } = action;
       return {
         ...state,
-        allIds: [...state.allIds, id]
+        allIds: [...state.allIds, id],
+        byIds: {
+          ...state.byIds,
+          [id]: {
+            text,
+            completed: false
+          }
+        }
       };
     default:
       return state;

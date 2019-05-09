@@ -3,6 +3,7 @@
 1. Use object[key] to access values of this key. E.g: users = {1: {id: 1, name: "a"}, 2: {id: 2, name:"b"}} then users[1] -> {id: 1, name:"a"}
 2. Use Destructuring to exact value from an array, object. E.g: const {id, name} = user;
 3. Use spread syntax to clone/ combine array, object, pass to function. E.g: let arr = [...arr1, 5]
+4. Open parenthesis & curly bracket: arrow function syntax () => (expession) or () => ({id : 1}) to return an object/value, or if you want to use {}, you have to return a value. For stateless functional components, we use destructuring operator {} to pass arguments, e.g: ({ todos }) => {...}. When returning an JSX, we use ().
 
 # Redux
 

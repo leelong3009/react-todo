@@ -11,7 +11,7 @@
 
 # Redux
 
-<img src="redux.png" />
+<img src="redux.png" style="align:center"/>
 
 1. connect()
 
@@ -20,6 +20,13 @@
     - Map this action to buttons by importing it, connecting it via mapDispatchToProps, passing it as an argument in the component's constructor function, then calling it directly. 
     - Create a reducer for it, return the filter type which will be merged to the store's state 
     - In the component, collect filter type value in state when calling mapStateToProps, then filtering values. At this step the component already has the updated store's state.
-- mapStateToProps is used to to map current store's values to the component's passed in arguments. The value returned by mapStateToProps must have the same name as the passed in argument.
-- mapDispatchToProps is used to dispatch actions. We can directly call dispatch(action) or redux will help you bind the function to dispatch if you pass the action as an object. This mapped function is called via props if the component is created by extending the Component class, or via parameter if it is created by a function.
-- values returned by reducers are the values in store, so we use these keywords to fetch data in components.
+- **mapStateToProps(state, ownProps?) => Object**:
+    - Used to to map current store's values to the component's passed in arguments.
+    - Each field in the object returned by mapStateToProps will become a prop for your actual component. We must use the same field's name in the props.
+- **mapDispatchToProps: Object | (dispatch, ownProps?) => Object**
+    - Used to dispatch actions to the store.
+    - *dispatch* is a function of the Redux store.
+    - 2 ways to *dispatch* actions:
+        - We can directly call props.dispatch(action)
+        - Redux will help you bind the function to dispatch if you pass the mapDispatchToProps. This mapped function is called via props. Hence, instead of calling () => props.dispatch(() => action()), we can call props.action() directly.
+- Values returned by reducers are the values in store, so we use these keywords to fetch data in components.

@@ -11,6 +11,7 @@
 
 # Redux
 
+<img src="redux.png" />
 
 1. connect()
 

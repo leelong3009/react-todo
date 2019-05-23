@@ -11,6 +11,8 @@
 
 # Redux
 
+### Redux is a predictable state container for JavaScript apps.
+
 <img src="redux.png" style="align:center"/>
 
 1. connect()

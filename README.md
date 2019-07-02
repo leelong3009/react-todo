@@ -2,7 +2,7 @@
 
 1. Use object[key] to access values of this key. E.g: 
     - users = {1: {id: 1, name: "a"}, 2: {id: 2, name:"b"}} then users[1] -> {id: 1, name:"a"}
-2. Use Destructuring to exact value from an array, object. E.g: const {id, name} = user;
+2. Use Destructuring to exact values from an array, object. E.g: const {id, name} = user;
 3. Use spread syntax to clone/ combine array, object, pass to function. E.g: let arr = [...arr1, 5]
 4. Open parenthesis & curly bracket: 
     - arrow function syntax () => (expession) or () => ({id : 1}) to return an object/value, or if you want to use {}, you have to return a value. 
@@ -32,3 +32,6 @@
         - We can directly call props.dispatch(action)
         - Redux will help you bind the function to dispatch if you pass the mapDispatchToProps. This mapped function is called via props. Hence, instead of calling () => props.dispatch(() => action()), we can call props.action() directly.
 - Values returned by reducers are the values in store, so we use these keywords to fetch data in components.
+2. Redux thunk
+- https://github.com/reduxjs/redux-thunk
+- Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.

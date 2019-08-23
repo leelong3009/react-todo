@@ -4,6 +4,7 @@ import { getTodosByVisibility } from '../util/selector';
 import { toogleTodo } from '../actions/todoAction';
 
 const TodoList = ({ todos, toogleTodo }) => (
+  <h1>Todo List</h1>
   <ul className='todo-list'>
     {todos && todos.length
       ? todos.map(todo => {
